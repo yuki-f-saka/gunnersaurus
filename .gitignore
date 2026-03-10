@@ -1,0 +1,22 @@
+# Binary
+gunnersaurus
+/dist/
+
+# Go
+*.test
+*.out
+coverage.txt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# VHS demo recording
+*.tape
+*.gif
