@@ -125,3 +125,10 @@ gunnersaurus/
 - Ghostty のアニメーション方式: JSON フレーム配列 + ANSI コード埋め込み
 - gostty（Go 実装の参考）: https://github.com/ashish0kumar/gostty
 - フレームサイズ: 77×41 が Ghostty 標準。ガンナーザウルスは 40×20 程度でコンパクトに
+
+### ASCII アートデザインの参考素材
+
+- **Mascot Football Stickers（Behance）**: https://www.behance.net/gallery/101497853/Mascot-Football-Stickers/modules/584849085
+  - サッカーマスコットのアニメーションスティッカー（GIF）
+  - ポーズ・動きの参考にする（ジャンプ、ガッツポーズ、ボール蹴りなど）
+  - Session 1 の ASCII アート設計時にブラウザで開いて参照すること
