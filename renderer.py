@@ -30,7 +30,7 @@ def _remove_watermark(img: Image.Image) -> Image.Image:
     for y in range(h // 2, h):
         for x in range(w // 2, w):
             r, g, b, a = pixels[x, y]
-            if abs(int(r) - int(g)) < 8 and abs(int(g) - int(b)) < 8 and 100 < r < 170:
+            if abs(int(r) - int(g)) < 8 and abs(int(g) - int(b)) < 8 and 100 < r < 210:
                 pixels[x, y] = bg
     return img
 
