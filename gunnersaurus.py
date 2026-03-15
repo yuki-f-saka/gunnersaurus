@@ -3,7 +3,7 @@
 import pathlib
 from animation import build_frames, run
 
-SPRITE = pathlib.Path(__file__).parent / "images" / "Gemini_Generated_Image_wd07e1wd07e1wd07.png"
+SPRITE = pathlib.Path(__file__).parent / "images" / "perfect_image.png"
 
 
 def main() -> None:

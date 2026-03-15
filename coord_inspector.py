@@ -11,7 +11,7 @@ import termios
 
 from renderer import load_sprite, render_frame, TARGET_SIZE
 
-IMAGE_PATH = "images/Gemini_Generated_Image_wd07e1wd07e1wd07.png"
+IMAGE_PATH = "images/perfect_image.png"
 COORDS_FILE = "coords.json"
 
 # ─── Terminal sequences ───────────────────────────────────────────────────────
@@ -148,10 +148,17 @@ def main() -> None:
     pixels  = img.load()
     frame   = render_frame(img)
 
+    # Load existing coords.json if present
     recorded: list[tuple] = []
+    if os.path.exists(COORDS_FILE):
+        with open(COORDS_FILE) as f:
+            for entry in json.load(f):
+                r, g, b = entry["rgb"]
+                recorded.append((entry["x"], entry["y"], r, g, b, entry.get("label", "")))
+
     hover_pos = None
     hover_rgb = (0, 0, 0)
-    message   = ""
+    message   = f"Loaded {len(recorded)} coords from {COORDS_FILE}" if recorded else ""
 
     old_settings = termios.tcgetattr(sys.stdin)
 
